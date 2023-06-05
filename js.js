@@ -71,3 +71,47 @@ function addUser() {
     row.remove();
   }
   
+
+  function editUser(button) {
+    let row = button.parentNode.parentNode;
+    let cells = row.getElementsByTagName("td");
+    
+    let name = cells[0].innerHTML;
+    let email = cells[1].innerHTML;
+    let age = cells[2].innerHTML;
+    
+    let editNameInput = document.getElementById("name");
+    let editEmailInput = document.getElementById("email");
+    let editAgeInput = document.getElementById("age");
+    
+    editNameInput.value = name;
+    editEmailInput.value = email;
+    editAgeInput.value = age;
+
+    editRowIndex = row.rowIndex;
+
+    let editFormContainer = document.getElementById("edit-form-container");
+    editFormContainer.style.display = "block";
+  }
+
+  function updateUser() {
+    let editNameInput = document.getElementById("name");
+    let editEmailInput = document.getElementById("email");
+    let editAgeInput = document.getElementById("age");
+
+    let name = editNameInput.value;
+    let email = editEmailInput.value;
+    let age = editAgeInput.value;
+
+    if (name && email && age) {
+      let table = document.getElementById("user-table");
+      let row = table.rows[editRowIndex];
+      let cells = row.getElementsByTagName("td");
+
+      cells[0].innerHTML = name;
+      cells[1].innerHTML = email;
+      cells[2].innerHTML = age;
+
+  
+    }
+  }

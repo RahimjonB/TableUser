@@ -29,7 +29,9 @@ th, tr {
 td{
     text-align: center;
 }
-
+.edit-form{
+  text-align: center;
+}
 .add-text{
     
         font-size: 26px;

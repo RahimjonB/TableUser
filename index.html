@@ -38,6 +38,7 @@
                 <td>40</td>
                 <td>+(992) 987654321</td>
                 <td><button onclick="deleteUser(event)">Delete</button></td>
+                <td><button onclick="editUser(this)">Edit</button></td>
                 <td></td>
               </tr>
               <tr>
@@ -48,6 +49,7 @@
                 <td>30</td>
                 <td>+(992) 987654321</td>
                 <td><button onclick="deleteUser(event)">Delete</button></td>
+                <td><button onclick="editUser(this)">Edit</button></td>
                 <td></td>
               </tr>
               <tr>
@@ -58,6 +60,7 @@
                 <td>30</td>
                 <td>+(992) 987654321</td>
                 <td><button onclick="deleteUser(event)">Delete</button></td>
+                <td><button onclick="editUser(this)">Edit</button></td>
                 <td></td>
               </tr>
               
@@ -76,6 +79,15 @@
     <input type="text" id="phoneNum" placeholder="Phone Number" class="inp">
     <button onclick="addUser()">Add User</button>
   </div>
+  </div>
+  <div id="edit-form-container">
+  <h3><center>EDIT USER</center></h3>
+    <div class="edit-form">
+      <input type="text" id="name" placeholder="Name">
+      <input type="text" id="email" placeholder="Email">
+      <input type="text" id="age" placeholder="Age">
+      <button onclick="updateUser()">Update</button>
+    </div>
   </div>
 <br><br><br><br>
 
